@@ -1,64 +1,33 @@
-# ComplianceLab - Homepage
+# Compliance Tools Built for Your Team
 
-A cinematic, scroll-driven marketing website for a cybersecurity compliance tools service.
+**What I do:** I build internal compliance tools for teams who need security solutions that actually fit their workflow.
 
-## Features
+Most compliance software is built for everyone and fits no one. I take the opposite approach — custom tools designed around how your team actually works, integrated with your existing stack, and built to solve your specific problems.
 
-- **GSAP + Lenis smooth scroll** — Buttery smooth scrolling with pinned panels
-- **Text scramble effect** — "compliance tools" text decodes on page load
-- **Pinned panels** — Work section stacks like cards as you scroll
-- **Custom cursor** — Cyan dot cursor with mix-blend-mode difference
-- **Kinetic animations** — GSAP-powered entrance and scroll animations
-- **Mobile responsive** — Clean fallbacks for touch devices
+## Services
 
-## Design System
+- **Compliance Audits** — Security assessments aligned with SOC 2, ISO 27001, and industry-specific frameworks
+- **Custom Tools** — Internal compliance tools built to your exact specifications
+- **Policy Automation** — Automated policy creation, distribution, and attestation tracking
 
-| Token | Value |
-|-------|-------|
-| Background | `#0A0A0B` (near-black) |
-| Text | `#F5F5F7` (warm off-white) |
-| Accent | `#00D4FF` (cyan/teal from images) |
-| Display Font | Space Grotesk |
-| Body Font | Inter |
+## How I Work
 
-## Setup
+**Discovery first.** Before writing any code, I spend time understanding your compliance requirements, existing workflows, and where the friction actually is.
 
-1. **Copy your images** to the `assets/` folder:
-   - `quantum-bg.jpg` — Hero background (your quantum computer image)
-   - `project-1.jpg` — Security Awareness Platform
-   - `project-2.jpg` — Incident Response
-   - `project-3.jpg` — Argus Scanner
+**Build iteratively.** You'll see working prototypes early. No six-month black box — just steady progress you can test and refine.
 
-2. **Serve locally**:
-   ```bash
-   cd /Users/main/Projects/compliance-tools-homepage
-   python3 -m http.server 8000
-   ```
+**Deploy with your team.** Internal tools only work if people actually use them. I handle training, documentation, and handoff so the transition is smooth.
 
-3. **Open** `http://localhost:8000`
+## Collaboration
 
-## Stack
+I work with security teams, compliance officers, and engineering leads who need tools that bridge the gap between "audit requirement" and "daily reality."
 
-- GSAP 3.12.5 (animations)
-- GSAP ScrollTrigger (scroll-linked effects)
-- Lenis 1.1.14 (smooth scroll)
-- SplitType (text animation)
-- Vanilla CSS (custom properties, no framework)
+If you're building in this space — security tooling, compliance automation, audit platforms — I'm open to collaboration. Whether that's co-building a tool, sharing domain expertise, or combining skill sets on a client project.
 
-## Animation Highlights
+## Get in Touch
 
-1. **Hero**: Text scramble on "compliance tools" + parallax background
-2. **Work Section**: Stacking pinned panels with scale/brightness transition
-3. **Services**: Staggered card reveal with hover effects
-4. **Process**: Sequential step reveal with animated accent lines
-5. **Navigation**: Blur backdrop on scroll
+Have a compliance challenge that off-the-shelf software can't solve? Let's talk.
 
-## Performance
+**Email:** aiagent.mackenzie@gmail.com
 
-- Images use `loading="lazy"` (add manually if needed)
-- GSAP animations respect `prefers-reduced-motion`
-- Mobile disables complex scroll-scrub effects
-
-## Credits
-
-Design inspired by framer.com — scroll storytelling, cinematic presentation.
+Or use the contact form on the site.
