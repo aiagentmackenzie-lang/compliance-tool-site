@@ -332,27 +332,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const form = document.querySelector('.contact-form');
 if (form) {
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
     const button = form.querySelector('button[type="submit"]');
-    const originalText = button.innerText;
-    
-    // Show sending state
     button.innerText = 'Sending...';
     button.disabled = true;
     
-    // Simulate sending (replace with actual form submission)
-    setTimeout(() => {
-      button.innerText = 'Message Sent!';
-      button.style.background = '#22c55e';
-      
-      setTimeout(() => {
-        button.innerText = originalText;
-        button.style.background = '';
-        button.disabled = false;
-        form.reset();
-      }, 3000);
-    }, 1500);
+    // Form submits naturally to Formspree
+    // Button state will reset on page reload after submission
   });
 }
 
