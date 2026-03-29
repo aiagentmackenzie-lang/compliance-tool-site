@@ -326,18 +326,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
-// FORM HANDLING
+// FORM HANDLING (AJAX - stays on page)
 // ========================================
 
 const form = document.querySelector('.contact-form');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
     const button = form.querySelector('button[type="submit"]');
+    const originalText = button.innerText;
+    
     button.innerText = 'Sending...';
     button.disabled = true;
     
-    // Form submits naturally to Formspree
-    // Button state will reset on page reload after submission
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok) {
+        button.innerText = 'Message Sent!';
+        button.style.background = '#22c55e';
+        form.reset();
+        
+        setTimeout(() => {
+          button.innerText = originalText;
+          button.style.background = '';
+          button.disabled = false;
+        }, 3000);
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      button.innerText = 'Failed - try again';
+      button.style.background = '#ef4444';
+      
+      setTimeout(() => {
+        button.innerText = originalText;
+        button.style.background = '';
+        button.disabled = false;
+      }, 3000);
+    }
   });
 }
 
